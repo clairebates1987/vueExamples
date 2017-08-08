@@ -1,5 +1,5 @@
 var myTable = new Vue({
-	el: '#myTable'.
+	el: '#myTable',
 	data: {
 		lessons: [
 			{ name: 'Test lesson 1', subject: 'Maths', slides: 2 },
