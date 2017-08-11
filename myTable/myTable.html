@@ -6,20 +6,26 @@
     <link rel="stylesheet" href="myTable.css">
   </head>
   <body>
-    <div id="myTable">
-    	<table>
-    		<tr>
-    			<th>1</th>
-    			<th>2</th>
-    			<th>3</th>
-    		</tr>
-    		<tr v-for="lesson in lessons">
-    			<td>{{lesson.name}}</td>
-    			<td>{{lesson.subject}}</td>
-    			<td>{{lesson.slides}}</td>
-    		</tr>
-    	</table>
-    </div>
+  	<h1>Lessons</h1>
+  	<div id="lessons">
+  		<input type="text" v-model="searchQuery" placeholder="Enter your search terms" />
+
+	    <div id="myTable">
+	    	<table>
+	    		<tr>
+	    			<th>Name</th>
+	    			<th>Subject</th>
+	    			<th>No. of Slides</th>
+	    		</tr>
+	    		<tr v-for="lesson in filteredResults">
+	    			<td>{{lesson.name}}</td>
+	    			<td>{{lesson.subject}}</td>
+	    			<td>{{lesson.slides}}</td>
+	    		</tr>
+	    	</table>
+	    </div>
+  	</div>
+  	
     
     <script src="myTable.js"></script>
 </html>
