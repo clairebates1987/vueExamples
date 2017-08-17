@@ -30,5 +30,11 @@ var myTable = new Vue({
             // Return an array with the filtered data.
             return lessons_array;
         }
-    }
+    },
+    methods: {
+	    sortBy: function(sortKey) {
+	      this.reverse = (this.sortKey == sortKey) ? ! this.reverse : false;
+	      this.sortKey = sortKey;
+	    }
+	}
 });
